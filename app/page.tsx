@@ -12,7 +12,7 @@ import {
   PageSectionTitle,
 } from "@/components/ui/page";
 import Footer from "@/components/footer";
-
+import QuickSearch from "@/components/quick-search";
 
 
 export default async function Home() {
@@ -22,6 +22,7 @@ export default async function Home() {
     <div>
       <Header />
       <PageContainer>
+        <QuickSearch/>
         <Image
           src={banner}
           alt="Agende nos melhores profissionais"
@@ -51,7 +52,7 @@ export default async function Home() {
           </PageSectionScroller>
         </PageSectionContent>
       </PageContainer>
-      <Footer/>
+     
     </div>
   );
 }
