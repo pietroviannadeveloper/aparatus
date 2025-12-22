@@ -24,7 +24,7 @@ export const PageSectionScroller = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+    <div className="flex w-full flex-nowrap gap-4 overflow-x-auto overscroll-x-contain pb-1 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden">
       {children}
     </div>
   );
