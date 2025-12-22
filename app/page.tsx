@@ -14,7 +14,6 @@ import {
 import Footer from "@/components/footer";
 import QuickSearch from "@/components/quick-search";
 
-
 export default async function Home() {
   const barbershops = await getBarbershops();
   const popularBarbershops = await getPopularBarbershops();
@@ -22,7 +21,7 @@ export default async function Home() {
     <div>
       <Header />
       <PageContainer>
-        <QuickSearch/>
+        <QuickSearch />
         <Image
           src={banner}
           alt="Agende nos melhores profissionais"
@@ -41,7 +40,6 @@ export default async function Home() {
               <BarbershopItem key={barbershop.id} barbershop={barbershop} />
             ))}
           </PageSectionScroller>
-       
         </PageSectionContent>
         <PageSectionContent>
           <PageSectionTitle>Barbearias populares</PageSectionTitle>
@@ -52,7 +50,6 @@ export default async function Home() {
           </PageSectionScroller>
         </PageSectionContent>
       </PageContainer>
-     
     </div>
   );
 }

@@ -15,7 +15,7 @@ export const PageSectionContent = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return <div className="space-y-3">{children}</div>;
+  return <div className="min-w-0 space-y-3">{children}</div>;
 };
 
 export const PageSectionScroller = ({
@@ -24,8 +24,8 @@ export const PageSectionScroller = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="flex gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-      {children}
+    <div className="-mx-5 min-w-0 overflow-x-auto overscroll-x-contain px-5 pb-1 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div className="flex w-max flex-nowrap gap-4 *:shrink-0">{children}</div>
     </div>
   );
 };
